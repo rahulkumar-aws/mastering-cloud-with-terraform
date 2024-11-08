@@ -1,7 +1,7 @@
 # Configure the AWS provider
-provider "aws" {
-  region = var.aws_region
-}
+# provider "aws" {
+#   region = var.aws_region
+# }
 
 # Additional provider configuration examples
 
