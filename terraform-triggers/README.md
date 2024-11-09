@@ -67,6 +67,30 @@ resource "aws_instance" "example" {
 - If `create_instance` is changed to `false`, `count` becomes 0, causing Terraform to destroy the instance.
 - This can be used to dynamically manage resource creation based on changing condition.
 
+**Real-life example with count: Managing Development and Production Environments**
+Use case: We hace a variable environment that can be set to either dev or prod. If environment is set to prod, Terraform should deploy an EC2 instance; if it set to
+dev, no EC2 instance should be created.
+
+```hcl
+# Default the environment variable
+variable "environment" {
+    type = string
+    default = "dev"
+}
+
+# EC2 instance that only deploys if environment is prod
+resource "aws_instance" "example" {
+    count = var.environment == "prod" ? 1 : 0
+    ami = "ami-xxxxx"
+    instance_type = "t2.micro"
+
+    tags = {
+        Name = "Production Instance"
+        Environment = var.environment
+    }
+}
+```
+
 **Example with for_each**
 `for_each` can be used to dynamically update resources when the elements in a map or list change. For example, we might manage multiple EC2 instances using a map of instance names.
 
@@ -91,6 +115,45 @@ resource "aws_instance" "example" {
 - Changing values in `instance_name` causes Terraform to update only the affected instances.
 
 This approcah is benefocial for managing dynamic sets of resources where additions, removals, or updates are controlled by the input `map` or `list`.
+
+**Example 2**
+```hcl
+# Default instance configuration for each environment
+variable "instance_config" {
+    type = map(object({
+        ami = string
+        instance_type = string
+    }))
+
+    default = {
+        dev = {
+            ami = "ami-123456"
+            instance_type = "t2.micro"
+        }
+        test = {
+            ami = "ami-87890"
+            instance_type = "t2.small"
+        }
+        prod = {
+            ami = "ami-909090"
+            instance_type = "t2.medium"
+        }
+    }
+}
+
+# Create an instance for each environment based on instance_config
+resource "aws_instance" "environment_instances" {
+    for_each = var.instance_configs
+    ami = each.value.ami
+    instance_type = each.value.instance_type
+
+    tags = {
+        Name = "${each.key}-instance"
+        Environment = each.key
+    }
+}
+
+```
 
 4. **Data Source Dependencies**
 Data sources in Terraform can pull information about existing infrastructure, and somtime you can use these to conditionally update resources. 
