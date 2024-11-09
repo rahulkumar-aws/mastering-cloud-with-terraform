@@ -62,3 +62,10 @@
 ## [About the Author](./authors.md)
 
 Learn more about the author, including their expertise, background, and professional details, in the [authors.md](./authors.md) file.
+
+## License 
+
+This book is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License (CC BY-NC-ND 4.0)**.  
+You may share this material freely with attribution but may not use it for commercial purposes or distribute modified versions.  
+For more details, see the full [LICENSE](./LICENSE.md).
+[![Creative Commons License](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
