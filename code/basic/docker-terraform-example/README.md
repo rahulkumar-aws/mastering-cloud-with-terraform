@@ -316,7 +316,7 @@ Do you really want to destroy all resources?
 ```
 
 ```text
-    Enter a value: yes
+Enter a value: yes
 
 docker_container.nginx: Destroying... [id=93f805c1c118ba7805cd0fab8873329fc21d4bd84e0b9ed06e4ed5fc72472f0a]
 docker_container.nginx: Destruction complete after 1s
