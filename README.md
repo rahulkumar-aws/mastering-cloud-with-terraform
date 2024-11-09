@@ -1,4 +1,6 @@
-# Table of Contents: Terraform Book
+# Mastering Terraform: IaC with Real-World Examples
+---
+## Table of Contents: 
 
 ## 1. Understand Infrastructure as Code IaC Concepts
 1. [Explain what IaC is](./tutorials/1-understand-infrastructure-as-code-iac-concepts/explain-what-iac-is.md)
