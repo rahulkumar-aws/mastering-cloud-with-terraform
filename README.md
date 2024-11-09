@@ -1,5 +1,11 @@
 # Mastering Terraform: IaC with Real-World Examples
 ---
+🚧 **Work in Progress** 🚧  
+This book is currently under active development. Some chapters or examples may be incomplete or subject to change.  
+Check back regularly for updates and improvements.
+
+[![Project Status: Work in Progress](https://img.shields.io/badge/Status-Work_in_Progress-yellow)](#)
+
 ## Table of Contents: 
 
 ## 1. Understand Infrastructure as Code IaC Concepts
