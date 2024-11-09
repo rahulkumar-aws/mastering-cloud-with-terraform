@@ -55,5 +55,8 @@
 
 ## 9. Understand HCP Terraform Capabilities
 1. [Explain how HCP Terraform helps manage infrastructure](./tutorials/9-understand-hcp-terraform-capabilities/explain-how-hcp-terraform-helps-manage-infrastructure.md)
-2. [Describe how HCP Terraform enables collaboration and governance](./tutorials/understand-hcp-terraform-capabilities/9-describe-how-hcp-terraform-enables-collaboration-and-governance.md)
+2. [Describe how HCP Terraform enables collaboration and governance](./tutorials/9-understand-hcp-terraform-capabilities/describe-how-hcp-terraform-enables-collaboration-and-governance.md)
 
+## [About the Author](./authors.md)
+
+Learn more about the author, including their expertise, background, and professional details, in the [authors.md](./authors.md) file.
