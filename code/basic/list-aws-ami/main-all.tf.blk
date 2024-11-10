@@ -1,0 +1,64 @@
+provider "aws" {
+  region = "us-east-1"  # Specify your preferred AWS region
+}
+
+# Amazon Linux 2 (Amazon)
+data "aws_ami" "amazon_linux" {
+  owners      = ["amazon"]
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+}
+
+# Ubuntu 20.04 LTS (Canonical)
+data "aws_ami" "ubuntu" {
+  owners      = ["099720109477"]  # Canonical's AWS account ID for Ubuntu
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+}
+
+# RHEL 8 (Red Hat)
+data "aws_ami" "rhel" {
+  owners      = ["309956199498"]  # Red Hat's AWS account ID
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["RHEL-8.*_HVM-*-x86_64*"]
+  }
+}
+
+# Windows Server 2019 (Microsoft)
+data "aws_ami" "windows" {
+  owners      = ["801119661308"]  # Microsoft's AWS account ID
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["Windows_Server-2019-English-Full-Base-*"]
+  }
+}
+
+# Outputs to view the selected AMIs
+output "amazon_linux_ami" {
+  value = data.aws_ami.amazon_linux.id
+}
+
+output "ubuntu_ami" {
+  value = data.aws_ami.ubuntu.id
+}
+
+output "rhel_ami" {
+  value = data.aws_ami.rhel.id
+}
+
+output "windows_ami" {
+  value = data.aws_ami.windows.id
+}
