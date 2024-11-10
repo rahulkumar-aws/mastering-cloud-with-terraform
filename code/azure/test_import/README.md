@@ -1,0 +1,1 @@
+terraform import azurerm_resource_group.rg3 /subscriptions/dummy-3f39-4f04-9d52-dummy/resourceGroups/azure-bigdata-stack-rg
