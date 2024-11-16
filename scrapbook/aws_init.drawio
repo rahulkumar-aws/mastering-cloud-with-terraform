@@ -64,6 +64,12 @@
         <mxCell id="iub8Lbnmtt8SPLZfnUpV-21" value="NAT gateway" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="310" y="250" width="60" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="iub8Lbnmtt8SPLZfnUpV-23" value="Public Route Table" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="260" width="81" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iub8Lbnmtt8SPLZfnUpV-24" value="Private Route Table" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="648.5" y="401" width="81" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
