@@ -1,0 +1,22 @@
+data "aws_regions" "all" {
+  all_regions = true  # Include regions not enabled in your account
+}
+
+# Output the list of regions
+output "aws_regions" {
+  value = data.aws_regions.all.names
+}
+
+# Set the region for querying availability zones
+provider "aws" {
+  region = "us-east-1"  # Replace with your preferred region
+}
+
+# Fetch availability zones for the region
+data "aws_availability_zones" "available" {}
+
+# Output the list of AZs
+output "aws_availability_zones" {
+  value = data.aws_availability_zones.available.names
+}
+
