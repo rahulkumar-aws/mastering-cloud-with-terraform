@@ -4,11 +4,17 @@
 
 
 ### Objectives
-- Configure Microsoft Entra ID
-    - Introduction to Microsoft Entra ID
-    - Microsoft Entra ID concepts
-    - Microsoft Entra ID Editions
-    - Configure Device Identities
+1. [Configure Microsoft Entra ID](#objective-1-configure-microsoft-entra-id)
+    - [Introduction to Microsoft Entra ID](#1-introduction-to-microsoft-entra-id)
+    - [Microsoft Entra ID concepts](#2-microsoft-entra-id-concepts)
+    - [Microsoft Entra ID Editions](#3-microsoft-entra-id-editions)
+    - [Configure Device Identities](#4-configure-device-identities)
+2. [Configure User and Group Accounts](./configure-and-manage-user-and-group-accounts.md)
+    - [User Accounts](./configure-and-manage-user-and-group-accounts.md#1-user-accounts)
+    - [Bulk Operations](./configure-and-manage-user-and-group-accounts.md#2-bulk-operation)
+    - [Group Accounts](./configure-and-manage-user-and-group-accounts.md#3-group-accounts)
+    - [Self-service password reset (SSPR)](./configure-and-manage-user-and-group-accounts.md#4-self-service-password-reset-sspr)
+    - [Multi-tenant environment](./configure-and-manage-user-and-group-accounts.md#5-multi-tenant-environments)
 
 ### **Objective 1: Configure Microsoft Entra ID**
 
